@@ -1,0 +1,22 @@
+﻿@model Post
+
+
+@await Html.PartialAsync("_Post")
+<br />
+<a asp-action="index" asp-controller="blog">Back to Blog Index</a>
+
+@* Replaced this markup with reusable partial view that's common between
+    this view and Index.cshtml
+    <article class="blog-post">
+    <h1>
+        @Html.ActionLink(Model.Title, "Post", "Blog",
+            new { year = Model.Posted.Year, month = Model.Posted.Month, key = Model.Key }
+        )
+    </h1>
+    <div class="details">
+        Posted <span>@Model.Posted</span> by <span>@Model.Author</span>
+    </div>
+    <div class="content">
+        @Model.Body
+    </div>
+</article>*@
